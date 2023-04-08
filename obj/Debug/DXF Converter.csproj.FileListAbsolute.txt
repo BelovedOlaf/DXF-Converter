@@ -1,0 +1,17 @@
+C:\Users\Administrator\Desktop\DXF Converter\bin\Debug\DXF Converter.exe.config
+C:\Users\Administrator\Desktop\DXF Converter\bin\Debug\DXF Converter.exe
+C:\Users\Administrator\Desktop\DXF Converter\bin\Debug\DXF Converter.pdb
+C:\Users\Administrator\Desktop\DXF Converter\obj\Debug\DXF Converter.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\DXF Converter\obj\Debug\MainWindow.g.cs
+C:\Users\Administrator\Desktop\DXF Converter\obj\Debug\App.g.cs
+C:\Users\Administrator\Desktop\DXF Converter\obj\Debug\DXF Converter_MarkupCompile.cache
+C:\Users\Administrator\Desktop\DXF Converter\obj\Debug\DXF Converter_MarkupCompile.lref
+C:\Users\Administrator\Desktop\DXF Converter\obj\Debug\MainWindow.baml
+C:\Users\Administrator\Desktop\DXF Converter\obj\Debug\DXF Converter.g.resources
+C:\Users\Administrator\Desktop\DXF Converter\obj\Debug\DXF_Converter.Properties.Resources.resources
+C:\Users\Administrator\Desktop\DXF Converter\obj\Debug\DXF Converter.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\DXF Converter\obj\Debug\DXF Converter.exe
+C:\Users\Administrator\Desktop\DXF Converter\obj\Debug\DXF Converter.pdb
+C:\Users\Administrator\Desktop\DXF Converter\bin\Debug\netDxf.dll
+C:\Users\Administrator\Desktop\DXF Converter\bin\Debug\netDxf.xml
+C:\Users\Administrator\Desktop\DXF Converter\obj\Debug\DXF Converter.csproj.CopyComplete
