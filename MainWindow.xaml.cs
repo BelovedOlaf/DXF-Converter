@@ -31,32 +31,6 @@ namespace DXF_Converter
 		public MainWindow()
 		{
 			InitializeComponent();
-			/*
-			// your DXF file name
-			string saveFile = "sample.dxf";
-
-			// create a new document, by default it will create an AutoCad2000 DXF version
-			DxfDocument doc = new DxfDocument(DxfVersion.AutoCad2000);
-			
-			// an entity
-			Line entity = new Line(new Vector2(5, 5), new Vector2(10, 5));
-			
-			// add your entities here
-			doc.Comments.Clear();
-			doc.DrawingVariables.ClearCustomVariables();
-			doc.Entities.Add(entity);
-			
-			// save to file
-			doc.Save(saveFile);
-			*/
-			/*
-			// this check is optional but recommended before loading a DXF file
-			DxfVersion dxfVersion = DxfDocument.CheckDxfFileVersion(file);
-			// netDxf is only compatible with AutoCad2000 and higher DXF versions
-			if (dxfVersion < DxfVersion.AutoCad2000) return;
-			// load file
-			DxfDocument loaded = DxfDocument.Load(file);
-			*/
 		}
 		private String GroupCodeAndValuetoString(int GroupCode, String value)
 		{
@@ -103,12 +77,15 @@ namespace DXF_Converter
 					text += GroupCodeAndValuetoString(2, "ENTITIES");
 				}
 
-				// Add Line Info
+				// Add Line Info 
 				{
-					text += AddLineInfo("0", 7, 0, 0, 12192, 0);
-					text += AddLineInfo("0", 7, 12192, 0, 12192, 2438);
-					text += AddLineInfo("0", 7, 12192, 2438, 0, 2438);
-					text += AddLineInfo("0", 7, 0, 2438, 0, 0);
+					for (int i = 296; i < byteArray.Length; i += 88)
+						text += AddLineInfo("0", 7,
+						BitConverter.ToDouble(byteArray.Skip(i).Take(8).ToArray(), 0),
+						BitConverter.ToDouble(byteArray.Skip(i+8).Take(8).ToArray(), 0),
+						BitConverter.ToDouble(byteArray.Skip(i+16).Take(8).ToArray(), 0),
+						BitConverter.ToDouble(byteArray.Skip(i+24).Take(8).ToArray(), 0));
+
 				}
 
 				// Add Section End Info 
@@ -116,7 +93,7 @@ namespace DXF_Converter
 					text += GroupCodeAndValuetoString(0, "ENDSEC");
 					text += GroupCodeAndValuetoString(0, "EOF");
 				}
-				
+
 				File.WriteAllText(saveFileName, text);
 			}
 		}

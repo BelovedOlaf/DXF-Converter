@@ -8,5 +8,6 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Content="OpenFile" HorizontalAlignment="Left" Margin="136,89,0,0" VerticalAlignment="Top" Width="153" Height="49" Click="OpenFileButton_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="399" Margin="324,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="306" Name="TextBox" VerticalScrollBarVisibility="Auto"/>
     </Grid>
 </Window>
